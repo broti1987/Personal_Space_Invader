@@ -1,0 +1,393 @@
+
+$baseFontFamily: 'VT323', arial, sans-serif;
+$headingFontFamily: 'VT323', arial, sans-serif;
+
+$baseColor: #FFD600;
+$baseBgColor: #330087;
+
+$baseLinkColor: #DDDDDD;
+$baseHoverColor: #FFFFFF;
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*:after, *:before { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+html, body, .all
+{
+    height: 100%;
+    margin:  0;
+    padding: 0;
+}
+
+body
+{
+    font-family: $baseFontFamily;
+    font-weight: 300;
+    font-size: 16px;
+    color: $baseColor;
+    background-color: $baseBgColor;
+    line-height: 1.9;
+}
+
+p
+{
+    margin: 0 0 0.7em 0;
+    padding: 0;
+    text-indent: 0;
+    font-size : 1em;
+    line-height : 1.5;
+}
+
+h1
+{
+    margin: 0 0 0.7em 0;
+    padding: 0;
+    text-indent: 0;
+    font-size : 4em;
+    line-height : 0.75;
+}
+
+a
+{
+    color: $baseLinkColor;
+    text-decoration: none;
+    outline: none !important;
+}
+
+a:hover
+{
+    color: $baseHoverColor;
+    text-decoration: none;
+    outline: none !important;
+}
+
+
+.all
+{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+
+.object
+{
+    position: absolute; 
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 1px);    
+    background-size: 100% 100%;
+}
+      
+
+.alien
+{
+    width: 500px;
+    height: 500px;
+    background-image: url('https://i.ibb.co/KNYwXQK/Alien.gif');
+}
+
+
+.invader
+{    
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    margin-left: -90px;
+    bottom: 100%;
+    background-image: url('https://i.ibb.co/KNYwXQK/Alien.gif');          
+}
+
+.defender
+{
+    width: 100px;
+    height: 100px;
+    background-image: url('https://i.ibb.co/gFsj2P6/Ship.gif');                                    
+}
+
+.spaceball
+{
+    width: 20px;
+    height: 20px;
+    background-image: url('https://i.ibb.co/CshpkHt/Fireball.gif');                                    
+}
+
+
+
+.aliens
+{
+    left: 0px;
+    top: 0px;   
+    display: block;
+    margin: 0;
+    padding: 0;        
+    list-style: none;
+    
+    
+    ul
+    {
+        display: block;
+        margin: 0;
+        padding: 0;        
+        list-style: none;
+    }
+
+    .row
+    {
+        display: block;
+        padding: 0;
+
+        height: 120px;
+        white-space: nowrap;        
+    }
+
+    .row:last-child
+    {
+        margin-bottom: 0;
+    }
+
+    .col
+    {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    .col:last-child
+    {
+        margin-right: 0;
+    }
+    
+}
+
+
+.alien
+{
+    left: 0;
+    top: 0;       
+    width: 100px;
+    height: 100px;
+}
+
+
+.defender
+{
+    left: 0px;
+    bottom: 40px;
+    z-index: 3;
+
+    width: 50px;
+    height: 50px;
+}
+
+.spaceball
+{
+    left: 17px;
+    bottom: 50px;
+    z-index: 22;
+    width: 20px;
+    height: 20px;
+}
+
+.controls
+{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 58px;
+    z-index: 20;
+    color: #330087;
+    background-color: #330087;
+   
+    
+    
+    > span    
+    {
+        display: inline-block;
+        height: 34px;
+        border: 1px solid #FF7A00;
+        border-radius: 10px;        
+        margin: 20px 0 0 6px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
+        cursor: pointer;
+        box-shadow: 0px 5px 0px 0px #FF7A00;
+        
+        background-color: #FFD600;
+    }
+
+    .left
+    {
+        width: 55px;
+    }
+
+    .right
+    {
+        width: 55px; 
+    }
+
+    .space
+    {
+        width: 186px;
+    }
+    
+}
+
+
+.win
+{
+    left: 0;
+    top: 40%;
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $headingFontFamily;
+    font-weight: 400;
+    line-height: 0.75;
+    display: none;
+}
+
+
+.lose
+{
+    left: 0;
+    top: 50%;
+    width: 100%;
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $headingFontFamily;
+    font-weight: 400;
+    line-height: 0.75;
+    display: none;
+
+}
+
+.restart
+{
+    left: 0;
+    top: 80%;
+    width: 100%;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $headingFontFamily;
+    font-weight: 300;
+    line-height: 1;
+    color: #DDDDDD;
+    cursor: pointer;
+    display: none;
+
+    &:hover
+    {
+        color: #FFFFFF;
+    }
+}
+
+
+
+.game
+{
+    position: absolute; 
+    top : 100px;
+    width: 320px;
+    height: 400px;
+    overflow:show;
+    background-color: #330087;
+    
+    
+    &.auto
+    {
+        .restart, .controls, .start
+        {
+            display: none !important;
+        }
+        
+        
+        .defender
+        {
+            bottom: 0;
+        }
+
+        .spaceball
+        {
+            bottom: 24px;
+        }
+    }
+    
+}
+
+.Title
+{
+    position: absolute;
+    top: 0;
+    width: 400px; 
+    margin: 20px;
+    text-align: center;  
+    z-index: 3;
+    
+}
+
+.how
+{
+    position: absolute;
+    right: px;
+    top: 550px;
+    width: 300px; 
+    margin: 40px;
+    text-align: center;  
+    
+  
+    
+    ul
+    {
+        list-style: circle;
+    }
+    
+    li
+    {
+        cursor: pointer;
+    }
+    
+    li:hover
+    {
+        color: #FFFFFF;
+    }
+    
+    .current
+    {
+        color: #DDDDDD;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-width: 767px)
+{
+    .all
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .driverControls
+    {
+        right: auto;
+        top: 500px;
+        left: 10px;
+    }
+}
+
+
+
