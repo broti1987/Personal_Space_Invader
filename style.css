@@ -233,7 +233,7 @@ a:hover {
   width: 320px;
   height: 400px;
   overflow: show;
-  background-color: #330087;
+  background-color:rgba(51,0,125,0);
 }
 .game.auto .restart, .game.auto .controls, .game.auto .start {
   display: none !important;
