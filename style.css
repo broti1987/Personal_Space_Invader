@@ -251,7 +251,7 @@ a:hover {
   width: 400px;
   margin: 20px;
   text-align: center;
-  z-index: 10;
+  z-index: 10 !important;
 }
 
 .how {
